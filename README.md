@@ -1,4 +1,5 @@
 # 🐧 Penguins of the Desert 🌵
+![DALL·E 2024-02-10 14 05 01 - Design a bold and emblematic logo for a hacker group named 'Penguins in a Desert'  The logo should depict a cartoonish penguin with a rebellious attit](https://github.com/BDR-Pro/PenguinsOfTheDarkWeb/assets/91114465/160b32cf-ba6a-459c-99d1-12cf1ffda15e)
 
 Welcome to **Penguins of the Desert**, the coolest spot in the hottest places! 🎉 This is where we dive deep into the sands of the internet to bring you an oasis of content, hidden away from the prying eyes of the surface web. Ready to explore? Let's dive in! 🚀
 
