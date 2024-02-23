@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin of the Desert</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light grey background */
+        }
+        .container {
+            background-color: #ffffff; /* White background for the content */
+            border-radius: 8px; /* Rounded corners for the container */
+            padding: 20px; /* Padding inside the container */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+            margin-top: 40px; /* Add some top margin */
+        }
+        h1, .post h2 {
+            color: #333333; /* Dark grey color for headlines */
+            text-align: center; /* Centering headlines */
+        }
+        img.logo {
+            display: block;
+            margin: 20px auto; /* Center the logo and add some margin */
+            max-width: 500px; /* Increase the logo size */
+            width: 100%; /* Make it responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .post {
+            margin-bottom: 40px; /* Add some margin below each post */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Penguins of the Desert</h1>
+        <img src="{% static 'penguin.png' %}" alt="Penguin Logo" class="logo">
+        <div class="row">
+            {% for post in posts %}
+                <div class=""> <!-- Use Bootstrap grid system for responsive posts -->
+                    <div class="post bg-light p-3 border rounded"> <!-- Add some Bootstrap styling for posts -->
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.content | linebreaksbr }}</p>
+                        <p><small>Published on: {{ post.published_date }}</small></p>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="col-12">
+                    <p>No posts have been published yet.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
